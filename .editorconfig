@@ -1,0 +1,11 @@
+# EditorConfig for mkpwd
+
+root = true
+
+# Just normal standard.
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+indent_style = space
+indent_size = 4
