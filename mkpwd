@@ -43,7 +43,6 @@ MSG_TOO_LONG = f'The entered value is too long (>{MAX_LENGTH}).'
 
 # --- [end] Settings & text strings ---------  #
 
-
 # Display help/usage with "-h", and exit
 if len(sys.argv) >= 2 and sys.argv[1] == '-h':
     sys.exit(USAGE)
@@ -79,27 +78,23 @@ while True:
         U_INPUT = int(DEFAULT_LENGTH)
 
 # Character lists
-S1 = list(ascii_lowercase)
-S2 = list(ascii_uppercase)
-S3 = list(digits)
-S4 = list(punctuation)
-
-# With the lists (S1..S4) the maximum length is 52, and then you get: "IndexError:
-# list index out of range". So we must double the size (104) to get to MAX_LENGTH (72).
-S1.extend(S1)
-S2.extend(S2)
-S3.extend(S3)
-S4.extend(S4)
+# All strings combined will give the maximum length of 52, and then you get:
+# "IndexError: list index out of range". So we must double the size (104)
+# to get to MAX_LENGTH (72).
+L_CASE = list(ascii_lowercase * 2)
+U_CASE = list(ascii_uppercase * 2)
+DIGITS = list(digits * 2)
+PUNCTS = list(punctuation * 2)
 
 # Number of password(s)
 NUMBER_OF_PWDS = int(sys.argv[2]) if len(sys.argv) >= 3 else 1
 
 # Output
 for n in range(NUMBER_OF_PWDS):
-    shuffle(S1)
-    shuffle(S2)
-    shuffle(S3)
-    shuffle(S4)
+    shuffle(L_CASE)
+    shuffle(U_CASE)
+    shuffle(DIGITS)
+    shuffle(PUNCTS)
 
     # Ratio: 60/40 between ascii_* and digits/punctuation
     LETTERS_RATIO = round(PWD_LENGTH * (30/100))
@@ -108,12 +103,12 @@ for n in range(NUMBER_OF_PWDS):
     result = []
 
     for x in range(LETTERS_RATIO):
-        result.append(S1[x])
-        result.append(S2[x])
+        result.append(L_CASE[x])
+        result.append(U_CASE[x])
 
     for x in range(NON_LETTERS_RATIO):
-        result.append(S3[x])
-        result.append(S4[x])
+        result.append(DIGITS[x])
+        result.append(PUNCTS[x])
 
     PWD_NR = f' #{n + 1}' if NUMBER_OF_PWDS > 1 else ''
 
