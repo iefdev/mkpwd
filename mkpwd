@@ -5,7 +5,7 @@
 
 Description:    A simple password generator written in python,
                 to create strong random passwords.
-Version:        v0.99-20230818
+Version:        v0.99-20230820
 Source:         https://gitlab.com/iefdev/mkpwd
 Copyright:      2023, Eric F <eric@iefdev.se>
 License:        GPLv3
@@ -91,32 +91,22 @@ NUMBER_OF_PWDS = int(sys.argv[2]) if len(sys.argv) >= 3 else 1
 
 # Output
 for n in range(NUMBER_OF_PWDS):
-    shuffle(L_CASE)
-    shuffle(U_CASE)
-    shuffle(DIGITS)
-    shuffle(PUNCTS)
+    for l in (L_CASE, U_CASE, DIGITS, PUNCTS):
+        shuffle(l)
 
     # Ratio: 60/40 between ascii_* and digits/punctuation
     LETTERS_RATIO = round(PWD_LENGTH * (30/100))
     NON_LETTERS_RATIO = round(PWD_LENGTH * (20/100))
 
-    result = []
-
-    for x in range(LETTERS_RATIO):
-        result.append(L_CASE[x])
-        result.append(U_CASE[x])
-
-    for x in range(NON_LETTERS_RATIO):
-        result.append(DIGITS[x])
-        result.append(PUNCTS[x])
-
-    PWD_NR = f' #{n + 1}' if NUMBER_OF_PWDS > 1 else ''
+    result = [x  for x in range(LETTERS_RATIO) for x in (L_CASE[x], U_CASE[x])]
+    result.extend([x for x in range(NON_LETTERS_RATIO) for x in (DIGITS[x], PUNCTS[x])])
 
     shuffle(result)
 
+    OUTPUT = ''.join(result)
+    PWD_NR = f' #{n + 1}' if NUMBER_OF_PWDS > 1 else ''
     PROGRAM = f'{basename(sys.argv[0])}{PWD_NR}:\t' if QUIET is None else ''
 
-    OUTPUT = ''.join(result)
     print(f'{PROGRAM}{OUTPUT}'.expandtabs(4))
 
 sys.exit()
