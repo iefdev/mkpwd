@@ -5,7 +5,7 @@
 
 Description:    A simple password generator written in python,
                 to create strong random passwords.
-Version:        v0.99-20230820
+Version:        v0.99-20230822
 Source:         https://gitlab.com/iefdev/mkpwd
 Copyright:      2023, Eric F <eric@iefdev.se>
 License:        GPLv3
@@ -24,7 +24,7 @@ USAGE = '''Usage:
 
 Options:
     -h              Display this help.
-    -q              Quiet mode (only the pwd(s) in output).
+    -c              Clean mode (only the pwd(s) in output).
                     Useful for scripting.
 '''
 
@@ -47,8 +47,8 @@ MSG_TOO_LONG = f'The entered value is too long (>{MAX_LENGTH}).'
 if len(sys.argv) >= 2 and sys.argv[1] == '-h':
     sys.exit(USAGE)
 
-# Don't print PROGRAM in quiet mode (-q")
-if len(sys.argv) >= 2 and sys.argv[1] == '-q':
+# Don't print PROGRAM in clean mode (-c")
+if len(sys.argv) >= 2 and sys.argv[1] == '-c':
     QUIET = True
     PROGRAM = None
     sys.argv.pop(1)

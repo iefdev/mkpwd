@@ -106,9 +106,9 @@ If you have any feedback, suggestions? Please, use the Issues, Merge Requests, s
 <!-- Markdown: link & image dfn's -->
 [pythonVersion]: https://img.shields.io/badge/python-3.6+-FFD343.svg?logo=python&logoColor=FFD343&labelColor=3D75AD&style=plastic "Python 3.6+"
 [licenseBadge]: https://img.shields.io/badge/license-GPL--3.0--or--later-C00?style=plastic "GPL v3.0 or later"
-[mainBadge]: https://img.shields.io/badge/main-v0.99--20230818-darkgreen.svg?logo=gitlab&style=plastic
-[latestBadge]: https://img.shields.io/badge/latest-v0.5.0-blue.svg?logo=gitlab&style=plastic
-[latest]: https://gitlab.com/iefdev/mkpwd/tags/ "Latest release"
-[main]: https://gitlab.com/iefdev/mkpwd/ "Devel version (main)"
+[mainBadge]: https://img.shields.io/badge/main-v0.99-778899.svg?logo=gitlab&style=plastic
+[latestBadge]: https://img.shields.io/badge/latest-v0.6.0-blue.svg?logo=gitlab&style=plastic
+[latest]: https://gitlab.com/iefdev/mkpwd/-/releases/ "Latest tag/release"
+[main]: https://gitlab.com/iefdev/mkpwd/ "main branch"
 [x]: https://twitter.com/iefdev
 
