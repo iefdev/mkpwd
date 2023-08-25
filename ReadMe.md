@@ -4,7 +4,7 @@
 
 - - -
 
-[![][mainBadge]][main] <!--[![GitLab release][latestBadge]][latest]-->
+[![][mainBadge]][main] [![GitLab release][latestBadge]][latest]
 
 ![][pythonVersion] ![][licenseBadge]
 
@@ -88,8 +88,9 @@ xK,q50LJ;7]s3OCw~g
 
 ## Author notes
 
--   **[2023-08-18]** ...
-
+-   **[2023-08-25]** Making a tag/release (v0.6.0) of this. Not that it's really needed,
+    but as good practice. In case someone needs/wants to use the script - it's easier to use
+    releases, and keep it updated that way.
 
 **Pylint**
 
