@@ -1,0 +1,11 @@
+# Changelog
+
+Breef list of changes between versions.
+
+For full list see the list of commits:
+ - https://gitlab.com/iefdev/mkpwd/-/commits/main
+
+## mkpwd: v0.6.0
+- First tag/release
+- Option: Clean mode with -c
+- Misc code cleanup
