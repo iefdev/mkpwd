@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 # vim: set ft=python syntax=python ts=4 sts=4 sw=4 et ai enc=utf-8 fenc=utf-8
-'''
+"""
 /usr/local/bin/mkpwd
 
 Description:    A simple password generator written in python,
                 to create strong random passwords.
 
-@Author:         Eric F <eric@iefdev.se>
-@Copyright:      2023, Eric F
-@Source:         https://gitlab.com/iefdev/mkpwd
-@License:        GPLv3
-'''
+Author:         Eric F <eric@iefdev.se>
+Copyright:      2023, Eric F
+Source:         https://gitlab.com/iefdev/mkpwd
+License:        GPLv3
+"""
 
 __version__ = 'v0.99-20230829'
 
@@ -21,7 +21,7 @@ import sys
 
 _basename = basename(__file__)
 
-USAGE = f'''Version:
+USAGE = f"""Version:
     {__version__}
 
 Usage:
@@ -34,7 +34,7 @@ Options:
     -h              Display this help.
     -c              Clean mode (only the pwd(s) in output).
                     Useful for scripting.
-'''
+"""
 
 # --- Settings & text strings ---------------- #
 

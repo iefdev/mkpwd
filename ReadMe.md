@@ -31,7 +31,7 @@ Usage:
 
 Options:
     -h              Display this help.
-    -c              Quiet mode (only the pwd(s) in output).
+    -c              Clean mode (only the pwd(s) in output).
                     Useful for scripting.
 ```
 
@@ -55,17 +55,17 @@ mkpwd #3:   eVYrN4=Zj2W0!VwsrI8/9{?e
 ```
 
 
-#### Quiet mode
+#### Clean mode
 
-Use `mkpwd -q` to suppress anything but the passwords. This is great when scripting - like using it with, example: `mkpwd -q 18` will get you 1 password, 18 characters long.
+Use `mkpwd -c` to suppress anything but the passwords. This is great when scripting - like using it with, example: `mkpwd -c 18` will get you 1 password, 18 characters long.
 
 ```bash
 # one password
-$ mkpwd -q 18
+$ mkpwd -c 18
 =)b3aR_0V6s1BavZ*C
 
 # 3 passwords
-$ mkpwd -q 18 3
+$ mkpwd -c 18 3
 T:6O08bEqy)I3|\lXs
 Z9VKps;6lB1x2_%cD=
 xK,q50LJ;7]s3OCw~g
