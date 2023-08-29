@@ -5,7 +5,7 @@
 
 Description:    A simple password generator written in python,
                 to create strong random passwords.
-Version:        v0.6.0
+Version:        v0.99-20230829
 Source:         https://gitlab.com/iefdev/mkpwd
 Copyright:      2023, Eric F <eric@iefdev.se>
 License:        GPLv3
@@ -17,7 +17,7 @@ from string import ascii_lowercase, ascii_uppercase, digits, punctuation
 import sys
 
 USAGE = '''Usage:
-    mkpwd [ -hq ] [ size ] [ nr of pwds ]
+    mkpwd [ -h | -q ] [ size ] [ nr of pwds ]
     mkpwd           Enter a number at the prompt
     mkpwd 24        24 character pwd
     mkpwd 36 10     10x 36 character pwd
