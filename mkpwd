@@ -5,22 +5,30 @@
 
 Description:    A simple password generator written in python,
                 to create strong random passwords.
-Version:        v0.99-20230829
-Source:         https://gitlab.com/iefdev/mkpwd
-Copyright:      2023, Eric F <eric@iefdev.se>
-License:        GPLv3
+
+@Author:         Eric F <eric@iefdev.se>
+@Copyright:      2023, Eric F
+@Source:         https://gitlab.com/iefdev/mkpwd
+@License:        GPLv3
 '''
+
+__version__ = 'v0.99-20230829'
 
 from os.path import basename
 from random import shuffle
 from string import ascii_lowercase, ascii_uppercase, digits, punctuation
 import sys
 
-USAGE = '''Usage:
-    mkpwd [ -h | -q ] [ size ] [ nr of pwds ]
-    mkpwd           Enter a number at the prompt
-    mkpwd 24        24 character pwd
-    mkpwd 36 10     10x 36 character pwd
+_basename = basename(__file__)
+
+USAGE = f'''Version:
+    {__version__}
+
+Usage:
+    {_basename} [ -h | -c ] [ size ] [ nr of pwds ]
+    {_basename}           Enter a number at the prompt
+    {_basename} 24        24 character pwd
+    {_basename} 36 10     10x 36 character pwd
 
 Options:
     -h              Display this help.
@@ -105,7 +113,7 @@ for n in range(NUMBER_OF_PWDS):
 
     OUTPUT = ''.join(result)
     PWD_NR = f' #{n + 1}' if NUMBER_OF_PWDS > 1 else ''
-    PROGRAM = f'{basename(sys.argv[0])}{PWD_NR}:\t' if QUIET is None else ''
+    PROGRAM = f'{_basename}{PWD_NR}:\t' if QUIET is None else ''
 
     print(f'{PROGRAM}{OUTPUT}'.expandtabs(4))
 

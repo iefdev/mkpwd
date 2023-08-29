@@ -24,14 +24,14 @@ Use `mkpwd -h` to bring the help.
 
 ```txt
 Usage:
-    mkpwd [ -h | -q ] [ size ] [ nr of pwds ]
+    mkpwd [ -h | -c ] [ size ] [ nr of pwds ]
     mkpwd           Enter a number at the prompt
     mkpwd 24        24 character pwd
     mkpwd 36 10     10x 36 character pwd
 
 Options:
     -h              Display this help.
-    -q              Quiet mode (only the pwd(s) in output).
+    -c              Quiet mode (only the pwd(s) in output).
                     Useful for scripting.
 ```
 
